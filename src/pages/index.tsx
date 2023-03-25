@@ -2,8 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 // react icons
-import { BsArrowRight, BsLaptop, BsDatabase } from "react-icons/bs";
-import { FaLaptopCode } from "react-icons/fa";
+import { BsArrowRight, BsLaptop, BsDatabase, BsChatDots } from "react-icons/bs";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLaptopCode,
+  FaTwitter,
+} from "react-icons/fa";
+import { TbBrandWechat } from "react-icons/tb";
 import { HiFingerPrint } from "react-icons/hi";
 
 const services = [
@@ -61,6 +67,65 @@ const features = [
   {
     Icon: HiFingerPrint,
     iconBgWhite: "text-blue-500 ",
+  },
+];
+
+const stats = [
+  {
+    bgCol: "bg-yellow-500",
+    fig: 250,
+    desc: "Our Branches",
+  },
+  {
+    bgCol: "bg-green-500",
+    fig: 50,
+    desc: "Projects Done",
+  },
+  {
+    bgCol: "bg-red-500",
+    fig: 45,
+    desc: "Happy Users",
+  },
+  {
+    bgCol: "bg-blue-500",
+    fig: 100,
+    desc: "Awards",
+  },
+];
+
+const teamMember = [
+  {
+    name: "Suraj Singh",
+    designation: "Manager",
+  },
+  {
+    name: "Yashraj Jaiswal",
+    designation: "Software Developer",
+  },
+  {
+    name: "Dhiraj Dutta",
+    designation: "Canva Designer",
+  },
+];
+
+const testimonials = [
+  {
+    clientName: "Philip Mendez",
+    company: "Consectetur",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur deleniti necessitatibus aspernatur, accusantium voluptatum in.",
+  },
+  {
+    clientName: "Eugene Freeman",
+    company: "Tincidunt",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur deleniti necessitatibus aspernatur, accusantium voluptatum in.",
+  },
+  {
+    clientName: "Eugene Freeman",
+    company: "Tincidunt",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur deleniti necessitatibus aspernatur, accusantium voluptatum in.",
   },
 ];
 
@@ -228,9 +293,138 @@ export default function Home() {
         </div>
       </section>
       {/* call to action */}
-      <section></section>
-      {/* blog section */}
-      <section></section>
+      <section className="py-16 bg-primary-300">
+        <div className="flex items-center justify-between max-w-6xl mx-auto">
+          <div className="flex flex-col space-y-6 text-white ">
+            <h4>CALL TO ACTION</h4>
+            <h1 className="max-w-2xl text-6xl font-bold">
+              Let&apos; Dicuss With Us Your Estimate
+            </h1>
+            <Link
+              href="#_"
+              className="relative inline-flex items-center self-start justify-center px-6 py-3 space-x-4 overflow-hidden font-medium bg-white rounded group text-primary-600"
+            >
+              <span className="absolute top-0 left-0 flex w-0 h-full mb-0 transition-all duration-500 ease-in-out transform translate-y-0 bg-primary-600 opacity-90 group-hover:w-full"></span>
+              <span className="relative text-primary-600 group-hover:text-white">
+                Contact Us
+              </span>
+              <TbBrandWechat className="relative text-2xl group-hover:text-white" />
+            </Link>
+          </div>
+          <div className="relative h-72 w-[480px]">
+            <Image
+              src="/discuss-cta.jpg"
+              alt="let's discuss with us your estimate"
+              fill
+            />
+          </div>
+        </div>
+      </section>
+      {/* client testimonial */}
+      <section className="bg-primary-25 py-36">
+        <div className="flex flex-col items-center max-w-6xl mx-auto">
+          <h3 className="text-xl font-semibold text-primary-300">
+            CLIENT TESTIMONIALS
+          </h3>
+          <h2 className="max-w-xl text-6xl font-bold text-center text-primary-600">
+            What out clients say
+          </h2>
+          <div className="flex justify-center w-full mt-16 space-x-6 ">
+            {testimonials.map(({ clientName, company, review }, index) => (
+              <div
+                key={index}
+                className="flex flex-col max-w-xs border shadow-lg"
+              >
+                <div className="p-6 bg-white border-t-2 border-red-500">
+                  <p className="font-medium text-primary-600">{review}</p>
+                </div>
+                <div className="flex items-center px-6 py-3 space-x-3">
+                  <div className="relative w-16 h-16 overflow-hidden rounded-full">
+                    <Image
+                      src="/client_image.png"
+                      alt="client image for testimonial"
+                      fill
+                    />
+                  </div>
+                  <div className="flex flex-col ">
+                    <h4 className="text-lg font-semibold text-primary-600">
+                      {clientName}
+                    </h4>
+                    <p className="text-sm text-gray-400">{company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* stats section */}
+      <section className="py-20 bg-primary-600">
+        <div className="flex flex-row items-center justify-center max-w-6xl mx-auto space-x-4">
+          {stats.map(({ bgCol, fig, desc }, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center py-10 space-y-3 text-center text-white border-4 rounded-sm w-80 border-white/10 xl:odd:mb-12 xl:even:mt-12"
+            >
+              <div
+                className={`flex h-16 w-16 items-center justify-center rounded-full ${bgCol}`}
+              >
+                <BsChatDots className="text-3xl " />
+              </div>
+              <h3 className="font-bold text-7xl">{fig}</h3>
+              <p className="font-semibold ">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* our team members*/}
+      <section className=" py-36">
+        <div className="flex flex-col items-center max-w-6xl mx-auto">
+          <h3 className="text-xl font-semibold text-primary-300">SERVICES</h3>
+          <h2 className="max-w-xl text-6xl font-bold text-center text-primary-600">
+            Meet Out Exclusive Leadership
+          </h2>
+          <div className="flex justify-center w-full mt-16 space-x-6 ">
+            {teamMember.map(({ name, designation }, index) => (
+              <div
+                key={index}
+                className="relative flex flex-col items-center w-64 overflow-hidden text-center duration-300 bg-white border rounded shadow-lg cursor-default group text-primary-600 "
+              >
+                <div className="relative w-full h-72">
+                  <Image src="/team_member.jpg" alt="dotted background" fill />
+                  <div className="absolute w-full transition-all duration-200 ease-in-out opacity-0 -bottom-8 group-hover:bottom-0 group-hover:opacity-100">
+                    <div className="flex justify-center py-3 space-x-4">
+                      <Link
+                        href=""
+                        className="flex items-center justify-center w-8 h-8 text-lg text-blue-600 bg-white rounded-full"
+                      >
+                        <FaFacebook />
+                      </Link>
+                      <Link
+                        href=""
+                        className="flex items-center justify-center w-8 h-8 text-lg text-pink-600 bg-white rounded-full"
+                      >
+                        <FaInstagram />
+                      </Link>
+                      <Link
+                        href=""
+                        className="flex items-center justify-center w-8 h-8 text-lg bg-white rounded-full text-sky-600"
+                      >
+                        <FaTwitter />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="px-3 py-6 space-y-3 ">
+                  <h4 className="text-2xl font-bold">{name}</h4>
+                  <p className="text-sm font-medium ">{designation}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* footer */}
       <footer className="p-6 text-white bg-primary-700">
         <div className="flex items-center justify-between max-w-6xl p-3 pb-4 mx-auto border-b border-gray-400 space-between">
