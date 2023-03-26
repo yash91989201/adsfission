@@ -20,7 +20,7 @@ export default function ScrollToTop() {
 
   return scroll ? (
     <button
-      className="fixed  bottom-4 right-4 rounded-sm bg-primary-300 p-4 text-white transition-all hover:bg-primary-600 "
+      className="fixed bottom-6 right-6 rounded-sm border border-primary-300 bg-white p-4 text-primary-300 hover:border-none hover:bg-primary-300 hover:text-white "
       onClick={scrollToTop}
     >
       <FaArrowUp />
