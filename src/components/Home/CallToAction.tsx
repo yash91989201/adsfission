@@ -4,9 +4,9 @@ import { TbBrandWechat } from "react-icons/tb";
 
 export default function CallToAction() {
   return (
-    <section className="bg-primary-300 p-6 sm:px-8 sm:py-12 md:px-12 md:py-16 lg:px-16  lg:py-24 xl:px-0 xl:py-28">
-      <div className="mx-auto flex max-w-6xl flex-col items-center space-y-6  md:flex-row  md:justify-between  md:space-y-0">
-        <div className="flex  flex-col items-center space-y-6 text-white md:items-start">
+    <section className="bg-primary-300 px-8 py-14 md:px-12 md:py-16 lg:px-16 lg:py-24 xl:px-0 xl:py-28">
+      <div className="mx-auto flex max-w-6xl flex-col items-center space-y-12 md:flex-row  md:justify-between  md:space-y-0">
+        <div className="flex flex-col items-center  space-y-6 text-center text-sm font-bold text-white xs:text-left md:items-start">
           <h4>CALL TO ACTION</h4>
           <h1 className="text-center text-3xl font-bold sm:max-w-sm md:text-left  md:text-4xl lg:max-w-lg lg:text-6xl">
             Let&apos; Dicuss With Us Your Estimate
@@ -22,7 +22,7 @@ export default function CallToAction() {
             <TbBrandWechat className="relative text-2xl group-hover:text-white" />
           </Link>
         </div>
-        <div className="relative h-40 w-full  xs:h-60 xs:w-[480px]  md:h-64 ">
+        <div className="relative h-48 w-full  xs:h-60 xs:w-[480px]  md:h-64 ">
           <Image
             src="/discuss-cta.jpg"
             alt="let's discuss with us your estimate"

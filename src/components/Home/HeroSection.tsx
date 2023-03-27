@@ -6,7 +6,7 @@ import { Slide, Fade } from "react-awesome-reveal";
 export default function HeroSection() {
   return (
     <section
-      className="p-6 sm:px-8 sm:py-12 md:px-12 md:py-16 lg:px-16 lg:py-24  xl:px-0 xl:py-28"
+      className="px-8 py-14 md:px-12 md:py-16 lg:px-16 lg:py-24 xl:px-0 xl:py-28"
       style={{
         background: `url("/hero_banner_bg.jpg")`,
         backgroundRepeat: "no-repeat",
@@ -15,7 +15,7 @@ export default function HeroSection() {
     >
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between space-y-8  text-primary-600 sm:flex-row  md:space-y-0">
         <div className="flex w-full flex-col items-center space-y-3 xs:items-start">
-          <Slide triggerOnce cascade>
+          <Slide triggerOnce>
             <h3 className="text-center text-sm font-bold text-primary-300 xs:text-left ">
               YOU MAKE, WE MARKET.
             </h3>
