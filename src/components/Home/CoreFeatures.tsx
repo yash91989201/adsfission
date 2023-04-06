@@ -16,7 +16,7 @@ export default function CoreFeatures() {
           </div>
         </div>
         <div className="mx-auto flex max-w-lg flex-col items-start justify-center space-y-3 ">
-          <h3 className="w-full text-center text-sm font-bold text-primary-300 xs:text-left md:text-right">
+          <h3 className="w-full text-center text-sm font-bold text-primary-300 xs:text-left md:text-right md:text-base">
             CORE FEATURES
           </h3>
           <div className="space-y-3">
@@ -29,7 +29,7 @@ export default function CoreFeatures() {
               </h4>
             </div>
           </div>
-          <h6 className="text-center text-sm font-semibold text-primary-600 xs:text-left md:text-right">
+          <h6 className="text-center text-sm font-semibold leading-6  text-primary-600 xs:text-left md:text-right ">
             Does any industry face a more complex audience journey and marketing
             sales process than B2B technology? Consider the number of people who
             influence a sale, the length of the decision-making cycle, the
@@ -41,14 +41,14 @@ export default function CoreFeatures() {
               href="#_"
               className="group relative flex w-full items-center justify-center overflow-hidden rounded bg-primary-300 px-6 py-3 font-medium text-white xxs:w-auto"
             >
-              <span className="absolute top-0 left-0 mb-0 flex h-full w-0 translate-y-0 transform bg-primary-600 opacity-90 transition-all duration-500 ease-in-out group-hover:w-full"></span>
+              <span className="absolute top-0 left-0 mb-0 flex h-full w-0 translate-y-0 transform bg-primary-600 opacity-90 transition-all duration-300 ease-in-out group-hover:w-full"></span>
               <span className="relative group-hover:text-white">
                 Our Services
               </span>
             </Link>
             <Link
               href="#"
-              className="flex w-full items-center justify-center space-x-3 rounded border border-transparent border-primary-300 bg-white px-6 py-3 text-primary-300 outline-none transition-all duration-500 xxs:w-auto"
+              className="flex w-full items-center justify-center space-x-3 rounded border border-transparent  bg-white px-6 py-3 text-primary-300 outline-none transition-all duration-300 hover:border-primary-300 xxs:w-auto"
             >
               <span>Learn More</span>
               <BsArrowRight />

@@ -5,7 +5,7 @@ export default function ClientTestimonial() {
   return (
     <section className="bg-primary-25 px-8 py-14 md:px-12 md:py-16 lg:px-16 lg:py-24 xl:px-0 xl:py-28">
       <div className="mx-auto flex max-w-6xl flex-col items-center">
-        <h3 className="text-center text-sm font-bold text-primary-300 xs:text-left">
+        <h3 className="text-center text-sm font-bold text-primary-300 xs:text-left md:text-base">
           CLIENT TESTIMONIALS
         </h3>
         <h2 className="text-3xl font-bold sm:max-w-sm md:max-w-xl md:text-5xl lg:text-6xl">

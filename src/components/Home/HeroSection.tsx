@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowDown } from "react-icons/bs";
 import { Slide, Fade } from "react-awesome-reveal";
 
 export default function HeroSection() {
@@ -13,30 +13,30 @@ export default function HeroSection() {
         backgroundPosition: "center",
       }}
     >
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between space-y-8  text-primary-600 sm:flex-row  md:space-y-0">
-        <div className="flex w-full flex-col items-center space-y-3 xs:items-start">
+      <div className="flex flex-col items-center justify-between max-w-6xl mx-auto space-y-8 text-primary-600 sm:flex-row md:space-y-0">
+        <div className="flex flex-col items-center w-full space-y-3 xs:items-start">
           <Slide triggerOnce>
-            <h3 className="text-center text-sm font-bold text-primary-300 xs:text-left ">
+            <h3 className="text-sm font-bold text-center text-primary-300 xs:text-left md:text-base">
               YOU MAKE, WE MARKET.
             </h3>
-            <h2 className="text-center text-3xl font-bold xs:text-left sm:max-w-sm md:max-w-xl md:text-5xl lg:text-6xl">
+            <h2 className="text-3xl font-bold text-center xs:text-left sm:max-w-sm md:max-w-xl md:text-5xl lg:text-6xl">
               Best IT Solutions Provider Agency
             </h2>
-            <p className="my-3 text-center text-xs font-medium  leading-5 xs:text-left sm:max-w-xs sm:text-sm sm:leading-6 md:max-w-xl md:text-base">
+            <p className="my-3 text-xs font-medium leading-5 text-center xs:text-left sm:max-w-xs sm:text-sm sm:leading-6 md:max-w-xl md:text-base">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Consectetur voluptatum dicta minima reiciendis totam
               exercitationem ad impedit tempore, eligendi autem iure expedita
               perferendis eum libero?
             </p>
             <Link
-              href="#_"
-              className="group relative flex w-fit items-center justify-center   space-x-4   overflow-hidden rounded-sm bg-primary-300 px-6 py-3  font-medium text-white"
+              href="#services-section"
+              className="relative flex items-center justify-center px-6 py-3 space-x-4 overflow-hidden font-medium text-white rounded-sm group w-fit bg-primary-300"
             >
-              <span className="absolute top-0 left-0 mb-0 flex h-full w-0 translate-y-0 transform bg-primary-600 opacity-90 transition-all duration-500 ease-in-out group-hover:w-full"></span>
+              <span className="absolute top-0 left-0 flex w-0 h-full mb-0 transition-all duration-500 ease-in-out transform translate-y-0 bg-primary-600 opacity-90 group-hover:w-full"></span>
               <span className="relative group-hover:text-white">
                 Our Services
               </span>
-              <BsArrowRight className="relative group-hover:text-white" />
+              <BsArrowDown className="relative group-hover:text-white" />
             </Link>
           </Slide>
         </div>
