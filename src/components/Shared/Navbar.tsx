@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
+import { HiOutlineMenu } from "react-icons/hi";
 import Image from "next/image";
 
 export default function Navbar() {
-  const [scroll, setScroll] = useState(false);
+  const [showNavONScroll, setShowNavOnScroll] = useState(false);
   const [menu, setMenu] = useState(false);
   useEffect(() => {
     const scrollHandler = () => {
       if (window.scrollY > 160) {
-        setScroll(true);
-      } else setScroll(false);
+        setShowNavOnScroll(true);
+      } else setShowNavOnScroll(false);
     };
     window.addEventListener("scroll", scrollHandler);
     return () => window.addEventListener("scroll", scrollHandler);
@@ -19,31 +20,33 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full px-6 py-4 bg-primary-600 xl:px-0">
-        <div className="flex items-center justify-between max-w-6xl mx-auto ">
-          <div className="flex items-center space-x-3">
-            <div className="relative w-8 h-8 md:h-12 md:w-12 ">
-              <Image src="/logo.png" alt="company logo" fill />
+      <header className="bg-primary-600 px-6 py-4  shadow-lg xl:px-0">
+        <div className="mx-auto flex max-w-6xl items-center justify-between">
+          <Link href="/">
+            <div className="flex items-center space-x-3">
+              <div className="relative h-8 w-8">
+                <Image src="/logo.png" alt="company logo" fill />
+              </div>
+              <h1 className="font-semibold text-white md:text-2xl">
+                Ads Fission
+              </h1>
             </div>
-            <h1 className="font-semibold text-white md:text-3xl">
-              Ads Fission
-            </h1>
-          </div>
-          <div className="items-center justify-between hidden space-x-8 md:flex">
+          </Link>
+          <div className="hidden items-center justify-between space-x-6 md:flex">
             <nav>
-              <ul className="flex space-x-3 font-semibold text-primary-50">
+              <ul className="flex space-x-3 font-semibold text-primary-25">
                 <Link
                   href="#services-section"
-                  className="px-3 py-2 transition-colors duration-300 rounded-sm cursor-pointer hover:bg-primary-50 hover:text-primary-700"
+                  className="cursor-pointer rounded-sm px-3 py-2 transition-colors duration-300 hover:bg-primary-25 hover:text-primary-600 "
                 >
                   Services
                 </Link>
-                <li className="px-3 py-2 transition-colors duration-300 rounded-sm cursor-pointer hover:bg-primary-50 hover:text-primary-700">
+                <li className="cursor-pointer rounded-sm px-3 py-2 transition-colors duration-300 hover:bg-primary-25 hover:text-primary-600 ">
                   Contact
                 </li>
                 <Link
                   href="#about-us-section"
-                  className="px-3 py-2 transition-colors duration-300 rounded-sm cursor-pointer hover:bg-primary-50 hover:text-primary-700"
+                  className="cursor-pointer rounded-sm px-3 py-2 transition-colors duration-300 hover:bg-primary-25 hover:text-primary-600 "
                 >
                   About Us
                 </Link>
@@ -51,28 +54,27 @@ export default function Navbar() {
             </nav>
             <Link
               href="#"
-              className="flex items-center justify-center px-6 py-3 space-x-3 text-white transition-all duration-500 border border-transparent rounded-sm outline-none bg-primary-300 hover:border-primary-200 hover:bg-white hover:text-primary-200"
+              className="rounded-sm border border-primary-300 bg-primary-300 px-4 py-2 text-white transition-all duration-500 hover:bg-white hover:text-primary-300"
             >
-              <span>Free Consulting</span>
-              <BsArrowRight />
+              Get 7-day Trial
             </Link>
           </div>
           <button
             className="text-2xl text-white md:hidden"
             onClick={() => setMenu(true)}
           >
-            <RxHamburgerMenu />
+            <HiOutlineMenu />
           </button>
         </div>
       </header>
       <aside
-        className={`fixed top-0  h-screen w-64 origin-right bg-primary-600 py-3 px-6 transition-all delay-100 duration-300 ease-in-out md:hidden ${
-          menu ? "right-0 z-[99]" : "-right-96 z-50"
+        className={`fixed top-0  z-[999] h-screen w-64  origin-right bg-primary-300 py-3 px-6 transition-all delay-100 duration-300 ease-in-out md:hidden ${
+          menu ? "right-0" : "-right-96"
         }`}
       >
-        <div className="flex flex-row-reverse items-center mb-6">
+        <div className="mb-6 flex flex-row-reverse items-center">
           <button
-            className="p-2 text-xl text-white border"
+            className="border p-2 text-xl text-white "
             onClick={() => setMenu(false)}
           >
             <RxCross2 />
@@ -80,25 +82,22 @@ export default function Navbar() {
         </div>
         <nav>
           <ul className="flex flex-col space-y-3 font-semibold text-primary-50">
-            <li className="px-3 py-2 transition-colors duration-300 border-b cursor-pointer hover:bg-primary-50 hover:text-primary-700">
-              Home
-            </li>
-            <li className="px-3 py-2 transition-colors duration-300 border-b cursor-pointer hover:bg-primary-50 hover:text-primary-700">
+            <li className="cursor-pointer border-b px-3 py-2 transition-colors duration-300 hover:bg-primary-50 hover:text-primary-700">
               Services
             </li>
-            <li className="px-3 py-2 transition-colors duration-300 border-b cursor-pointer hover:bg-primary-50 hover:text-primary-700">
+            <li className="cursor-pointer border-b px-3 py-2 transition-colors duration-300 hover:bg-primary-50 hover:text-primary-700">
               Contact
             </li>
-            <li className="px-3 py-2 transition-colors duration-300 border-b cursor-pointer hover:bg-primary-50 hover:text-primary-700">
+            <li className="cursor-pointer border-b px-3 py-2 transition-colors duration-300 hover:bg-primary-50 hover:text-primary-700">
               About Us
             </li>
           </ul>
         </nav>
         <Link
           href="#"
-          className="flex items-center justify-center px-6 py-3 mt-6 space-x-3 bg-white rounded-sm text-primary-300"
+          className="mt-6 flex items-center justify-center space-x-3 rounded-sm bg-white px-6 py-3 text-primary-300"
         >
-          <span>Free Consulting</span>
+          <span>Get 7-day Trial</span>
           <BsArrowRight />
         </Link>
       </aside>

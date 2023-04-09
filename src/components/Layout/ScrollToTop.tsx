@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
 export default function ScrollToTop() {
-  const [scroll, setScroll] = useState(false);
+  const [scrollToTopBtn, setScrollToTopBtn] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 240) {
-        setScroll(true);
+        setScrollToTopBtn(true);
       } else {
-        setScroll(false);
+        setScrollToTopBtn(false);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -18,14 +18,14 @@ export default function ScrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  return scroll ? (
+  if (!scrollToTopBtn) return <></>;
+
+  return (
     <button
-      className="fixed bottom-6 right-6 rounded-sm border border-primary-300 bg-white p-4 text-primary-300 hover:border-none hover:bg-primary-300 hover:text-white "
+      className="fixed bottom-4 right-4 rounded-sm border border-primary-300 bg-primary-300 p-3 text-sm text-white transition-all delay-75 ease-in-out hover:bg-white hover:text-primary-300"
       onClick={scrollToTop}
     >
       <FaArrowUp />
     </button>
-  ) : (
-    <></>
   );
 }

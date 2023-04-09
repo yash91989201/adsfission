@@ -1,62 +1,64 @@
 import { BsDatabase, BsLaptop } from "react-icons/bs";
 import { FaLaptopCode } from "react-icons/fa";
 import { HiFingerPrint } from "react-icons/hi";
+import { BsInstagram } from "react-icons/bs";
+import { CgBrowser } from "react-icons/cg";
+import { TbWriting } from "react-icons/tb";
 
 const SERVICES = [
   {
-    heading: "IT Solutions",
-    subText: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    heading: "Post Creation",
+    subText: "We will create instagram and facebook posts for your business.",
     Icon: FaLaptopCode,
     iconCol: "bg-emerald-100 text-emerald-500 ",
     iconBgWhite: "text-emerald-500 ",
+    imagePath: "/post_creation.jpg",
   },
   {
-    heading: "Security System",
-    subText: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    Icon: HiFingerPrint,
-    iconCol: "bg-blue-100 text-blue-500 ",
-    iconBgWhite: "text-blue-500 ",
-  },
-  {
-    heading: "Web Development",
-    subText: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    Icon: BsLaptop,
-    iconCol: "bg-amber-100 text-amber-500 ",
-    iconBgWhite: "text-amber-500 ",
-  },
-  {
-    heading: "Database Security",
-    subText: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    heading: "Social Media Management",
+    subText:
+      "We will provide support to enhance brand visibility and strengthen engagement strategies.",
     Icon: BsDatabase,
     iconCol: "bg-red-100 text-red-500 ",
     iconBgWhite: "text-red-500 ",
+    imagePath: "/social_media_management.jpg",
+  },
+  {
+    heading: "Web Development",
+    subText:
+      "We will construct your website with comprehensive SEO assistance to enhance your online visibility.",
+    Icon: BsLaptop,
+    iconCol: "bg-amber-100 text-amber-500 ",
+    iconBgWhite: "text-amber-500 ",
+    imagePath: "/web_development.jpeg",
+  },
+  {
+    heading: "Content Writing",
+    subText:
+      "We will construct your website with comprehensive SEO assistance to enhance your online visibility.",
+    Icon: BsLaptop,
+    iconCol: "bg-amber-100 text-amber-500 ",
+    iconBgWhite: "text-amber-500 ",
+    imagePath: "/content_writing.jpeg",
   },
 ];
 
 const FEATURES = [
   {
-    Icon: FaLaptopCode,
+    Icon: BsInstagram,
     iconBgWhite: "text-emerald-500 ",
   },
   {
-    Icon: HiFingerPrint,
+    Icon: CgBrowser,
     iconBgWhite: "text-blue-500 ",
   },
   {
-    Icon: BsLaptop,
+    Icon: TbWriting,
     iconBgWhite: "text-amber-500 ",
   },
   {
-    Icon: BsDatabase,
-    iconBgWhite: "text-red-500 ",
-  },
-  {
-    Icon: FaLaptopCode,
-    iconBgWhite: "text-emerald-500 ",
-  },
-  {
-    Icon: HiFingerPrint,
-    iconBgWhite: "text-blue-500 ",
+    Icon: TbWriting,
+    iconBgWhite: "text-amber-500 ",
   },
 ];
 
