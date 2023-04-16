@@ -33,7 +33,7 @@ export default function TeamMembersSection() {
                             <Link
                               key={index}
                               href={socialLink}
-                              className={`flex h-8 w-8 items-center justify-center rounded-full bg-white text-lg ${iconCol}`}
+                              className={`flex h-9 w-9 items-center justify-center rounded-full bg-white text-lg md:text-xl ${iconCol}`}
                             >
                               <Icon />
                             </Link>
