@@ -70,8 +70,8 @@ export default function Navbar() {
         </div>
       </header>
       <aside
-        className={`fixed top-0 z-[999] h-screen w-full origin-right  bg-primary-600 px-6 py-4 transition-all delay-100 duration-300 ease-in md:hidden ${
-          menu ? "right-0" : "-right-[150vw]"
+        className={`fixed top-0 z-[999] h-screen w-full origin-right  bg-primary-600 px-6 py-4 transition-all delay-100 duration-300 ease-in-out md:hidden ${
+          menu ? "right-0" : "-right-[125vw]"
         }`}
       >
         <div className="mx-auto flex items-center justify-between ">
