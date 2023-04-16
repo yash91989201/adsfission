@@ -1,9 +1,9 @@
 import Head from "next/head";
 import {
   HeroSection,
-  LatestServices,
   CallToAction,
   TeamMembersSection,
+  ContactUs,
 } from "@/components/Home";
 import ServicesSection from "@/components/Home/ServicesSection";
 import ClientTestimonial from "@/components/Home/ClientTestimonial";
@@ -26,12 +26,10 @@ export default function Home() {
       <ServicesSection />
       {/* call to action */}
       <CallToAction />
-      {/* latest services */}
-      <LatestServices />
-      {/* client testimonial */}
-      {/* <ClientTestimonial /> */}
       {/* our team members*/}
       <TeamMembersSection />
+      {/* client testimonial */}
+      <ContactUs />
     </>
   );
 }
