@@ -24,10 +24,12 @@ module.exports = {
       gridTemplateColumns: {
         "fit-services": "repeat(auto-fit, minmax(240px, 1fr))",
         "fit-features": "repeat(auto-fit, minmax(320px, 1fr))",
+        "fit-contact": "repeat(auto-fit, minmax(160px, 1fr))",
       },
       backgroundImage: {
         "hero-pattern": "url('/hero_banner_bg.jpg')",
-        "feature-card-pattern": "url('/service_dot.png')",
+        "dot-pattern": "url('/service_dot.png')",
+        "contact-pattern": "url('/contact_us.png')",
       },
       aspectRatio: {
         "service-ratio": "3 / 2",
